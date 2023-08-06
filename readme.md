@@ -45,3 +45,9 @@ holder++;
 ++holder;
 --holder;
 holder--;
+
+8 bits gives
+256 possibilites mutations; but it contains both positive and negative numbers
+
+32 bits gives
+4 billions: contains both positive and negative, 2 billions for positive and 2 billions for negative;
