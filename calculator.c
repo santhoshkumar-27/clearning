@@ -4,10 +4,12 @@
 int main(void) {
 
     // prompt user for x;
-    int x = get_int("x: ");
+    // int x = get_int("x: ");
+    long x = get_long("x: ");
     // prompt user for y;
-    int y = get_int("y: ");
+    // int y = get_int("y: ");
+    long y = get_long("y: ");
     // addition
-    int z = x + y;
-    printf("x + y:, %i \n", z);
+    long z = x + y;
+    printf("x + y:, %li \n", z);
 }
