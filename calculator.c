@@ -35,9 +35,9 @@ int main(void)
 
 void calculator(void)
 {
-    float x = get_float("x: ");
+    float x = get_int("x: ");
 
-    float y = get_float("y: ");
+    float y = get_int("y: ");
 
     float z =  x / y;
 
