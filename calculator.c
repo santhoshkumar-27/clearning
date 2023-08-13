@@ -39,7 +39,7 @@ void calculator(void)
 
     float y = get_int("y: ");
 
-    float z =  x / y;
+    float z =  (float) x / (float) y;
 
     printf("z is %.20f \n", z);
 }
