@@ -1,15 +1,18 @@
 #include <stdio.h>
+
 // this is called hoisting
+// this is only declaration not definition
 void meow(void);
+
 int main(void)
 {
-    for (int i = 0; i < 3; i++)
-    {
-        meow();
-    }
+    meow();
 }
 
 void meow(void)
 {
-    printf("meow \n");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("meow \n");
+    }
 }
