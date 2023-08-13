@@ -4,15 +4,30 @@ void main(void)
 {
     int n;
 
-    do
+    // do
+    // {
+    //     n = get_int("Size: ");
+    // } while (n < 1);
+    while (true)
     {
-        n = get_int("Width: ");
+        n = get_int("Size: ");
+        if (n > 0)
+        {
+            break;
+        }
     }
-    while( n < 1);
     // printf("???? \n");
+    // For each row
     for (int i = 0; i < n; i++)
     {
-        printf("?");
+        // For each column
+        for (int j = 0; j < n; j++)
+        {
+            // print bricks
+            printf("#");
+        }
+        // move to next row
+        printf("\n");
     }
     printf("\n");
 }
