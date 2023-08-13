@@ -2,16 +2,16 @@
 
 // this is called hoisting
 // this is only declaration not definition
-void meow(void);
+void meow(int n);
 
 int main(void)
 {
-    meow();
+    meow(5);
 }
 
-void meow(void)
+void meow(int n )
 {
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("meow \n");
     }
