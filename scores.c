@@ -20,5 +20,5 @@ void main(void)
         total += scores[i];
     }
     printf("length %f %i\n", (float)length, total);
-    printf("average %.3f \n", (total) / (float)length);
+    printf("average %.3f \n", (total) / (float) length);
 }
