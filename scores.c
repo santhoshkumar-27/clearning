@@ -4,9 +4,9 @@ void main(void)
 {
     int scores[3];
 
-    scores[0] = 23;
-    scores[1] = 23;
-    scores[2] = 23;
+    scores[0] = get_int("Score  :");
+    scores[1] = get_int("Score  :");
+    scores[2] = get_int("Score  :");
 
     // variable to store size of Arr
     int length = sizeof(scores) / sizeof(scores[0]);
