@@ -1,12 +1,15 @@
+#include <cs50.h>
 #include <stdio.h>
-
 void main(void)
 {
-    int score1 = 72;
+    int scores[3];
 
-    int score2 = 73;
+    scores[0] = 23;
+    scores[1] = 23;
+    scores[2] = 23;
 
-    int score3 = 74;
-
-    printf("average %.3f \n", (score1 + score2 + score3) / 3.0);
+    // variable to store size of Arr
+    int length = sizeof(scores) / sizeof(scores[0]);
+    printf("length %i \n", length);
+    printf("average %.3f \n", (scores[9] + scores[1] + scores[2]) / 3.0);
 }
