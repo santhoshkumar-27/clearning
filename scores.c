@@ -2,7 +2,8 @@
 #include <stdio.h>
 void main(void)
 {
-    int scores[3];
+    int n = get_int("How many scores to get from user: ");
+    int scores[n];
     int total = 0;
     // scores[0] = get_int("Score  :");
     // scores[1] = get_int("Score  :");
@@ -10,7 +11,7 @@ void main(void)
 
     // variable to store size of Arr
     int length = sizeof(scores) / sizeof(scores[0]);
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < n; i++)
     {
         do
         {
@@ -20,5 +21,5 @@ void main(void)
         total += scores[i];
     }
     printf("length %f %i\n", (float)length, total);
-    printf("average %.3f \n", (total) / (float) length);
+    printf("average %.3f \n", (total) / (float)n);
 }
