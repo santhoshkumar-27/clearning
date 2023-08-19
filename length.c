@@ -1,12 +1,15 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+
 
 int string_length(string data);
 
 void main(void)
 {
     string pname = get_string("Enter the name: \n");
-    int length = string_length(pname);
+    int length = strlen(pname);
+    // int length = string_length(pname);
     printf("this is lenght %i \n", length);
 }
 
@@ -20,3 +23,6 @@ int string_length(string s)
     }
     return i;
 }
+
+// manual.cs50.io
+// asciichart.com
