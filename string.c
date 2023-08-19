@@ -24,14 +24,17 @@ void print_in_capitalize(string s)
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         // printf("%c", s[i]);
-        if (islower(s[i]))
-        {
-            printf("%c", s[i] - 32);
-        }
-        else
-        {
-            printf("%c", s[i]);
-        }
+        // if (s[i] >= 'a' && s[i] <= 'z')
+        // if (islower(s[i]))
+        // {
+        //     // printf("%c", s[i] - 32);
+        //     printf("%c", toupper(s[i]));
+        // }
+        // else
+        // {
+        //     printf("%c", s[i]);
+        // }
+        printf("%c", toupper(s[i]));
     }
     printf("\n");
 }
