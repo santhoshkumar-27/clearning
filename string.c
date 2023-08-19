@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <string.h>
 #include <cs50.h>
 
@@ -23,7 +24,7 @@ void print_in_capitalize(string s)
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         // printf("%c", s[i]);
-        if (s[i] >= 'a' && s[i] <= 'z')
+        if (islower(s[i]))
         {
             printf("%c", s[i] - 32);
         }
