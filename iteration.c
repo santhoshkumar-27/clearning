@@ -13,9 +13,9 @@ int main(void)
 
 void draw(int h)
 {
-    for (int i = 0; i <= h; i++)
+    for (int i = 0; i < h; i++)
     {
-        for (int j = 0; j < i; j++)
+        for (int j = 0; j < i + 1; j++)
         {
             printf("*");
         }
