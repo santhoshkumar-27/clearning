@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <strings.h>
 
 int main(void)
 {
@@ -7,7 +8,7 @@ int main(void)
 
     for (int i = 0; i < 11; i++)
     {
-        if (names[i] == "isl")
+        if (strcasecmp(names[i], "isl") == 0)
         {
             printf("Found \n");
             return 0;
