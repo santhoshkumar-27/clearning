@@ -39,4 +39,7 @@ int main(void)
     printf("%i \n", *numbers);
     printf("%i \n", *(numbers + 1));
     printf("%i \n", *(numbers + 2));
+
+    // int has 4 bytes, but we need add one to the address but
+    // compiler takes adds plus one and compiler knows the data type
 }
