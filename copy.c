@@ -11,10 +11,18 @@ int main(void)
     char *s = get_string("s: ");
 
     char *t = malloc(strlen(s) + 1); // this is used for deep copy that means we create a seperate memory for the use case
+    if (t == NULL)
+    {
+        return 1;
+    }
 
     strcpy(t, s);
     // string t = s;
-
+    if (strlen(t) == 0)
+    {
+        free(t);
+        return 1;
+    }
     t[0] = toupper(t[0]); // we literally try to copy the value but here we get
     // address of value so the two variable have stored the only
     // address pointing the same address
@@ -28,7 +36,7 @@ int main(void)
 
     // this is deep copy
     // s: asdf
-    // asdf 
-    // Asdf 
+    // asdf
+    // Asdf
     free(t);
 }
