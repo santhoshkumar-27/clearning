@@ -25,4 +25,10 @@ int main(void)
     // s: asdf
     // Asdf
     // Asdf
+
+    // this is deep copy
+    // s: asdf
+    // asdf 
+    // Asdf 
+    free(t);
 }
