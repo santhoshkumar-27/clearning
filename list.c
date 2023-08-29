@@ -20,7 +20,24 @@ int main(void)
     list[1] = 2;
     list[2] = 3;
     // list of arrays same like above, below we use pointer arthmatic
-    *list = 1;
-    *(list + 1) = 2;
-    *(list + 2) = 3;
+    // *list = 1;
+    // *(list + 1) = 2;
+    // *(list + 2) = 3;
+
+    // now we need add to one more element
+
+    int *temp = malloc(4 * sizeof(int));
+
+    for (int i = 0; i < 3; i++)
+    {
+        // printf("%i \n", list[i]);
+        temp[i] = list[i];
+    }
+    temp[3] = 4;
+    list = temp;
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%i \n", list[i]);
+    }
+    free(temp);
 }
