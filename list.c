@@ -34,10 +34,11 @@ int main(void)
         temp[i] = list[i];
     }
     temp[3] = 4;
+    free(list); // free up memory already used
     list = temp;
     for (int i = 0; i < 4; i++)
     {
         printf("%i \n", list[i]);
     }
-    free(temp);
+    free(temp); // free up now tempory memory
 }
