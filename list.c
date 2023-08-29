@@ -28,15 +28,17 @@ int main(void)
     // *(list + 2) = 3;
 
     // now we need add to one more element
+
     // this is dynamic memory allocations
-    int *temp = malloc(4 * sizeof(int));
+    // resize the old array to size of 4
+    int *temp = realloc( list, 4 * sizeof(int));
 
     // now copy values from the list to temp
-    for (int i = 0; i < 3; i++)
-    {
-        // printf("%i \n", list[i]);
-        temp[i] = list[i];
-    }
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     // printf("%i \n", list[i]);
+    //     temp[i] = list[i];
+    // }
     // add extra values
     temp[3] = 4;
     free(list); // free up memory already used
