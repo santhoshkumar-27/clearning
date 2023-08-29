@@ -31,7 +31,7 @@ int main(void)
 
     // this is dynamic memory allocations
     // resize the old array to size of 4
-    int *temp = realloc( list, 4 * sizeof(int));
+    int *temp = realloc( list, 4 * sizeof(int)); // and it will handle the free the old space and return new address with resize
 
     // now copy values from the list to temp
     // for (int i = 0; i < 3; i++)
@@ -41,7 +41,7 @@ int main(void)
     // }
     // add extra values
     temp[3] = 4;
-    free(list); // free up memory already used
+    // free(list); // free up memory already used
     list = temp; // remember a new array
 
     // print the list
