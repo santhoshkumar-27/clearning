@@ -49,12 +49,32 @@ int main(void)
 
     if (n == NULL)
     {
-        free(list);
+        free(list->next);
+        free(list); // you cant touch the memory after you freed
         return 1;
     }
     n->number = 3;
     n->next = NULL;
-    list->next = n;
-
+    list->next->next = n;
     free(n);
+
+
+    for(node *tmp = list; tmp != NULL; tmp = tmp->next)
+    {
+        printf("%i \n", tmp->number);
+    }
+
+    // freee up
+
+    while (list != NULL)
+    {
+        // pointing second node
+        node *tmp = list->next;
+        // free up spaces
+        free(list);
+        // reassiging the second node of its first node
+        list = tmp;
+    }
+    
+    return 0;
 }
