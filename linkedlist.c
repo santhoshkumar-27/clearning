@@ -7,29 +7,54 @@ typedef struct node
     int number;
     struct node *next;
 } node;
-node createNode(int data);
-
 
 int main(void)
 {
-    node *node = NULL;
-    printf("%i \n", createNode(1).number);
-}
+    // list of the size
+    node *list = NULL;
 
-node createNode(int data)
-{
+    // initialize the node
     node *n = malloc(sizeof(node));
 
-    if (n != NULL)
+    if (n == NULL)
     {
-        // initialize a number
-        // (*n).number = data;
-        //  or
-        n->number = data;
-
-        // initialze a node
-        n->next = NULL;
+        return 1;
     }
-    return *n;
+
+    // initialize a number to node and next
+    // (*n).number = 1;
+    //  or
+    n->number = 1;
+    // initialze a node
+    (*n).next = NULL;
+    // or
+    // n->next = NULL;
+    list = n;
+    free(n);
+
+    // add second number
+    n = malloc(sizeof(node));
+
+    if (n == NULL)
+    {
+        free(list);
+        return 1;
+    }
+    n->number = 2;
+    n->next = NULL;
+    list->next = n;
+    free(n);
+    // add third number
+    n = malloc(sizeof(node));
+
+    if (n == NULL)
+    {
+        free(list);
+        return 1;
+    }
+    n->number = 3;
+    n->next = NULL;
+    list->next = n;
+
     free(n);
 }
